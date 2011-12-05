@@ -1,5 +1,5 @@
 (function($) {
-	$.fn.listex = function(options) { 
+	$.fn.listex = function(options) {
 		var settings = $.extend({
 			animate: true,
 			animationSpeed: 200
@@ -19,13 +19,13 @@
 			} else {
 				$('div.listex ul.list').hide();
 			}
-			
+
 			$('div.listex.container').removeClass('open');
 		});
 
-		return this.each(function() {        
+		return this.each(function() {
 			var select = $(this);
-			
+
 			select.after(listexMarkup);		// Add markup after `<select>`
 
 			var container = select.next('div.listex.container');
@@ -40,7 +40,7 @@
 			} else {
 				text.text(select.find('option').first().text());
 			}
-			
+
 			select.find('option').each(function() {
 				options.append('<li data-value=' + $(this).attr('value') + '>\
 					' + $(this).text() + '\
@@ -62,7 +62,7 @@
 
 			options.on('click', 'li', function(e) {
 				e.stopPropagation();
-				
+
 				$(this).addClass('selected').siblings().removeClass('selected');
 				container.removeClass('open');
 
@@ -75,6 +75,15 @@
 				} else {
 					$(this).parent().hide();
 				}
+
+				// Select box modification and events
+				if(select.val() != $(this).data('value')) {
+					select.val($(this).data('value')).change();
+				}
+			});
+
+			select.on('change', function() {
+				options.find('li[data-value="' + $(this).attr('value') + '"]').click();
 			});
 		});
 	};
