@@ -1,0 +1,33 @@
+<html>
+	<head>
+		<script src="jquery.js"></script>
+		<script src="../jquery.listex.js"></script>
+
+		<link type="text/css" rel="stylesheet" href="example.css">
+
+		<script>
+			$(document).ready(function() {
+				$('select.listex').listex();
+			});
+		</script>
+	</head>
+
+	<body>
+		<select class="listex">
+			<option>Choose...</option>
+			<option value="foo">Foo</option>
+			<option value="bar">Bar</option>
+		</select>
+
+		<!--<div class="listex container">
+			<div class="box">
+				<span class="text">Choose...</span>
+				<span class="arrow"></span>
+			</div>
+			<ul class="listex list">
+				<li data-value="foo">Foo</li>
+				<li data-value="bar">Bar</li>
+			</ul>
+		</div>-->
+	</body>
+</html>

@@ -1,0 +1,67 @@
+html, body {
+	font: 12px sans-serif;
+	padding: 50px;
+	margin: 0px;
+}
+
+div.listex.container {
+	width: 150px;
+	border-color: #76a7dc;
+}
+
+div.listex.container div.box {
+	border: 1px solid;	
+	border-color: inherit;
+	padding: 5px;
+	cursor: pointer;
+}
+
+div.listex.container.open {
+	border-color: #96c7fc;
+}
+div.listex.container.open div.box {
+	color: #444;
+}
+
+div.listex.container div.box:hover span.text {
+	color: #444;
+}
+
+div.listex.container div.box:hover span.arrow {
+	border-color: #96c7fc transparent;
+}
+
+div.listex.container div.box span.arrow {
+	float: right;
+	border-top-color: inherit;
+	border-bottom-color: inherit;
+	border-left-color: transparent;
+	border-right-color: transparent;
+	border-style: solid;
+	border-width: 10px 8px 0;
+	margin-top: 3px;
+	width: 0;
+}
+
+div.listex.container ul.list {
+	padding: 0px;
+	margin: 0px;
+	list-style: none;
+	border: 1px solid;
+	border-color: inherit;
+	border-top: none;
+
+	display: none;
+}
+
+div.listex.container ul.list li {
+	padding: 5px;
+	cursor: pointer;
+}
+div.listex.container ul.list li.selected {
+	color: #76a7dc;
+}
+div.listex.container ul.list li:hover {
+	background: #76a7dc;
+	color: #fff;
+}
