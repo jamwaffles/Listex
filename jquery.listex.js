@@ -1,3 +1,11 @@
+/* jQuery Listex
+   
+   For jQuery 1.7+
+
+   By James Waples
+      http://www.jamwaffles.co.uk/jquery/listex
+*/
+
 (function($) {
 	$.fn.listex = function(options) {
 		var settings = $.extend({
@@ -83,7 +91,7 @@
 		return this.each(function() {
 			var select = $(this);
 
-			select.after(listexMarkup.clone());		// Add markup after `<select>`
+			select.after(listexMarkup.clone()).hide();		// Add markup after `<select>`
 
 			var container = select.next('div.listex.container');
 			var box = container.find('div.box');
