@@ -8,19 +8,18 @@ div.listex.container {
 	width: 150px;
 	border-color: #76a7dc;
 }
-
-div.listex.container div.box {
-	border: 1px solid;	
-	border-color: inherit;
-	padding: 5px;
-	cursor: pointer;
-}
-
 div.listex.container.open {
 	border-color: #96c7fc;
 }
+div.listex.container div.box {
+	padding: 5px;
+	cursor: pointer;
+	border: 1px solid;
+	border-color: inherit;
+}
 div.listex.container.open div.box {
 	color: #444;
+	border-color: inherit;
 }
 
 div.listex.container div.box:hover span.text {
@@ -50,8 +49,9 @@ div.listex.container ul.list {
 	border: 1px solid;
 	border-color: inherit;
 	border-top: none;
-
+	position: absolute;
 	display: none;
+	background: #fff;
 }
 
 div.listex.container ul.list li {
@@ -64,4 +64,9 @@ div.listex.container ul.list li.selected {
 div.listex.container ul.list li:hover {
 	background: #76a7dc;
 	color: #fff;
+}
+div.listex.container ul.list li.disabled {
+	background: #ccc !important;
+	color: #000 !important;
+	cursor: default !important;
 }
