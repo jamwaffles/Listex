@@ -8,14 +8,30 @@
 		<script>
 			$(document).ready(function() {
 				$('select.listex').listex();
+
+				//$('select').find('option[value="baz"]').removeAttr('disabled');
+
+				$('select.sel2').change(function() {
+					$('select.sel1').find('option[value="baz"]').removeAttr('disabled');
+				});
 			});
 		</script>
 	</head>
 
 	<body>
-		<select class="listex">
+		<select class="listex sel1">
 			<option>Choose...</option>
 			<option value="foo">Foo</option>
+			<option value="baz" disabled="disabled">Disabled option</option>
+			<option value="bar">Bar</option>
+		</select>
+
+		<hr>
+
+		<select class="listex sel2">
+			<option>Choose...</option>
+			<option value="foo">Foo</option>
+			<option value="baz" disabled="disabled">Disabled option</option>
 			<option value="bar">Bar</option>
 		</select>
 
@@ -24,9 +40,9 @@
 				<span class="text">Choose...</span>
 				<span class="arrow"></span>
 			</div>
-			<ul class="listex list">
-				<li data-value="foo">Foo</li>
-				<li data-value="bar">Bar</li>
+			<ul>
+				<li>Foo</li>
+				<li>Bar</li>
 			</ul>
 		</div>-->
 	</body>
