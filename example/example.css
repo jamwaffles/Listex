@@ -7,6 +7,12 @@ html, body {
 div.listex.container {
 	width: 150px;
 	border-color: #76a7dc;
+	background: #fff;
+	display: inline-block;
+
+	/* Fuck IE */
+	zoom: 1;
+	*display: inline;
 }
 div.listex.container.open {
 	border-color: #96c7fc;
