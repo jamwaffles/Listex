@@ -19,6 +19,34 @@
 	</head>
 
 	<body>
+		<h1>Listex Demo</h1>
+
+		<p>	
+			Below is a demo of the Listex plugin. The first &lt;select> is a plain Listex box with default options.
+		</>
+
+		<p>
+			Note the disabled item in the first list. Now click on any option in the second list. The disabled item from the first list is now enabled, and all this has been bound to the standard <strong>.change()</strong> event of the second box. Easy!
+		</p>
+
+		<p>
+			The code used for this demo:
+			
+			<pre>
+	$(document).ready(function() {
+		$('select.listex').listex();
+
+		//$('select').find('option[value="baz"]').removeAttr('disabled');
+
+		$('select.sel2').change(function() {
+			$('select.sel1').find('option[value="baz"]').removeAttr('disabled');
+		});
+	});
+			</pre>
+		</p>
+
+		<hr>
+
 		<select class="listex sel1">
 			<option>Choose...</option>
 			<option value="foo">Foo</option>
