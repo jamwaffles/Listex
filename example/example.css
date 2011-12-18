@@ -4,7 +4,7 @@ html, body {
 	margin: 0px;
 }
 
-div.listex.container {
+div.listexContainer {
 	width: 150px;
 	border-color: #76a7dc;
 	background: #fff;
@@ -14,29 +14,29 @@ div.listex.container {
 	zoom: 1;
 	*display: inline;
 }
-div.listex.container.open {
+div.listexContainer.open {
 	border-color: #96c7fc;
 }
-div.listex.container div.box {
+div.listexContainer div.listexBox {
 	padding: 5px;
 	cursor: pointer;
 	border: 1px solid;
 	border-color: inherit;
 }
-div.listex.container.open div.box {
+div.listexContainer.open div.listexBox {
 	color: #444;
 	border-color: inherit;
 }
 
-div.listex.container div.box:hover span.text {
+div.listexContainer div.listexBox:hover span.listexText {
 	color: #444;
 }
 
-div.listex.container div.box:hover span.arrow {
+div.listexContainer div.listexBox:hover span.listexArrow {
 	border-color: #96c7fc transparent;
 }
 
-div.listex.container div.box span.arrow {
+div.listexContainer div.listexBox span.listexArrow {
 	float: right;
 	border-top-color: inherit;
 	border-bottom-color: inherit;
@@ -48,7 +48,7 @@ div.listex.container div.box span.arrow {
 	width: 0;
 }
 
-div.listex.container ul.list {
+div.listexContainer ul.listexList {
 	padding: 0px;
 	margin: 0px;
 	list-style: none;
@@ -60,18 +60,18 @@ div.listex.container ul.list {
 	background: #fff;
 }
 
-div.listex.container ul.list li {
+div.listexContainer ul.listexList li {
 	padding: 5px;
 	cursor: pointer;
 }
-div.listex.container ul.list li.selected {
+div.listexContainer ul.listexList li.selected {
 	color: #76a7dc;
 }
-div.listex.container ul.list li:hover {
+div.listexContainer ul.listexList li:hover {
 	background: #76a7dc;
 	color: #fff;
 }
-div.listex.container ul.list li.disabled {
+div.listexContainer ul.listexList li.disabled {
 	background: #ccc !important;
 	color: #000 !important;
 	cursor: default !important;
