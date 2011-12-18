@@ -112,6 +112,7 @@
 			}
 
 			// Set various styles
+			container.width = select.outerWidth();
 			options.css({ width: box.outerWidth(true) - parseInt(box.css('border-left-width')) - parseInt(box.css('border-right-width')) });		// Set correct list width
 
 
