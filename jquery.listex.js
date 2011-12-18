@@ -80,9 +80,9 @@
 
 		$('html').on('click', function(e) {
 			if(settings.animate) {
-				$('listexContainer ul.listexList').slideUp(settings.animationSpeed);
+				$('div.listexContainer ul.listexList').slideUp(settings.animationSpeed);
 			} else {
-				$('listexContainer ul.listexList').hide();
+				$('div.listexContainer ul.listexList').hide();
 			}
 
 			$('div.listexContainer').removeClass('open');
@@ -138,6 +138,13 @@
 			/* Events */
 			box.on('click', function(e) {
 				e.stopPropagation();
+
+				// Hide any other open selects
+				if(settings.animate) {
+					$('div.listexContainer.open').removeClass('open').find('ul').slideUp();
+				} else {
+					$('div.listexContainer.open ul').removeClass('open').find('ul').hide();
+				}
 
 				container.toggleClass('open');
 
