@@ -141,12 +141,14 @@
 
 				// Hide any other open selects
 				if(settings.animate) {
-					$('div.listexContainer.open').removeClass('open').find('ul').slideUp();
+					$('div.listexContainer.open').removeClass('open').find('ul').not(options).slideUp(settings.animationSpeed);
 				} else {
-					$('div.listexContainer.open ul').removeClass('open').find('ul').hide();
+					$('div.listexContainer.open ul').removeClass('open').find('ul').not(options).hide();
 				}
 
-				container.toggleClass('open');
+				options.css({ width: box.outerWidth(true) - parseInt(box.css('border-left-width')) - parseInt(box.css('border-right-width')) });		// Set correct list width
+
+				container.addClass('open');
 
 				if(settings.animate) {
 					options.stop(true, true).slideToggle(settings.animationSpeed);
