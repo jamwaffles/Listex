@@ -17,17 +17,17 @@
 
 		var originalContent;
 
-		var listexMarkup = $('<div class="listex container">\
-								<div class="box">\
-									<span class="text"></span>\
-									<span class="arrow"></span>\
+		var listexMarkup = $('<div class="listexContainer">\
+								<div class="listexBox">\
+									<span class="listexText"></span>\
+									<span class="listexArrow"></span>\
 								</div>\
-								<ul class="list"></ul>\
+								<ul class="listexList"></ul>\
 							</div>');
 		
 		// Polling
 		var refresh = function() {
-			var selects = $('select.listex.watch');
+			var selects = $('select.listexWatch');
 			var newContent = selects.html();
 
 			// If content has changed
@@ -37,11 +37,11 @@
 				selects.each(function() {
 					var select = $(this);
 
-					var container = select.next('div.listex.container');
-					var box = container.find('div.box');
-					var text = box.find('span.text');
-					var arrow = box.find('span.arrow');
-					var options = container.find('ul.list');
+					var container = select.next('div.listexContainer');
+					var box = container.find('div.listexBox');
+					var text = box.find('span.listexText');
+					var arrow = box.find('span.listexArrow');
+					var options = container.find('ul.listexListexList');
 
 					// Set various styles
 					options.css({ width: box.outerWidth(true) - parseInt(box.css('border-left-width')) - parseInt(box.css('border-right-width')) });		// Set correct list width
@@ -80,12 +80,12 @@
 
 		$('html').on('click', function(e) {
 			if(settings.animate) {
-				$('div.listex ul.list').slideUp(settings.animationSpeed);
+				$('listexContainer ul.listexList').slideUp(settings.animationSpeed);
 			} else {
-				$('div.listex ul.list').hide();
+				$('listexContainer ul.listexList').hide();
 			}
 
-			$('div.listex.container').removeClass('open');
+			$('div.listexContainer').removeClass('open');
 		});
 
 		return this.each(function() {
@@ -93,11 +93,11 @@
 
 			select.after(listexMarkup.clone()).hide();		// Add markup after `<select>`
 
-			var container = select.next('div.listex.container');
-			var box = container.find('div.box');
-			var text = box.find('span.text');
-			var arrow = box.find('span.arrow');
-			var options = container.find('ul.list');
+			var container = select.next('div.listexContainer');
+			var box = container.find('div.listexBox');
+			var text = box.find('span.listexText');
+			var arrow = box.find('span.listexArrow');
+			var options = container.find('ul.listexList');
 			
 			// Add identifier class to original select
 			select.addClass('listex');
