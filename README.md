@@ -43,12 +43,12 @@ Below are listed the options along with defaults for Listex, along with an expla
 
 The markup added by Listex is something like the following:
 
-	<div class="listex container open">
-		<div class="box">
-			<span class="text">Foo</span>
+	<div class="listexContainer open">
+		<div class="listexBox">
+			<span class="listexText">Foo</span>
 		</div>
 
-		<ul class="list" style="width: 148px; display: block;">
+		<ul class="listexList" style="width: 148px; display: block;">
 			<li data-value="Choose...">Choose...</li>
 
 			<li data-value="foo">Foo</li>
@@ -61,7 +61,7 @@ The markup added by Listex is something like the following:
 
 The CSS for the demo theme can be found on [Github](https://github.com/jamwaffles/Listex/blob/master/example/example.css), but is pretty self explanatory.
 
-When the dropdown list is open, the `open` class is added to `.listex.container`, which is useful for styling opened boxes.
+When the dropdown list is open, the `open` class is added to `.listexContainer`, which is useful for styling opened boxes.
 
 The only other thing that needs noting is that disabled Listex options have the `disabled` class.
 
