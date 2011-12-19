@@ -19,8 +19,8 @@
 
 		var listexMarkup = $('<div class="listexContainer">\
 								<div class="listexBox">\
-									<span class="listexText"></span>\
 									<span class="listexArrow"></span>\
+									<span class="listexText"></span>\
 								</div>\
 								<ul class="listexList"></ul>\
 							</div>');
